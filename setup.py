@@ -1,18 +1,17 @@
 from setuptools import setup, find_packages
 
+
 REQUIREMENT_FILE_NAME = "requirements.txt"
-REMOVE_PACKAGE = "-e ."
 
+HYPHEN_E_DOT = "-e ."
 
-def get_requirement_list(requirement_file_name=REQUIREMENT_FILE_NAME) -> list:
-    try:
-        requirement_list = None
-        with open(requirement_file_name) as requirement_file:
-            requirement_list = [requirement.replace("\n", "") for requirement in requirement_file]
-            requirement_list.remove(REMOVE_PACKAGE)
+def get_requirements_list():     
+    with open(REQUIREMENT_FILE_NAME) as requirement_file:
+        requirement_list = requirement_file.readlines()
+        requirement_list = [requirement_name.replace("\n","") for requirement_name in requirement_list]
+        if HYPHEN_E_DOT in requirement_list:
+            requirement_list.remove(HYPHEN_E_DOT)
         return requirement_list
-    except Exception as e:
-        raise e
 
 
 setup(
@@ -22,6 +21,6 @@ setup(
     description="Project has been completed.",
     author="Rachit More",
     packages=find_packages(),
-    install_requires=get_requirement_list()
+    install_requires=get_requirements_list()
 )
 

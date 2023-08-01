@@ -11,6 +11,7 @@ path = f"artifacts/logs/main/{current_time}.txt"
 logging = App_Logger(path)
 
 logging.log("Creating application")
+
 application = Flask(__name__)
 app = application
 CORS(app)
@@ -100,4 +101,4 @@ def contact():
     return render_template("contact.html")
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0",port=5000)
+    app.run(host="0.0.0.0")
