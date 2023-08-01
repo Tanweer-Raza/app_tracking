@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction</title>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Prediction</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f2f2f2;
+                margin: 0;
+                padding: 0;
+            }
+    
+            form {
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #fff;
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+    
+            legend {
+                font-size: 24px;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+    
+            .form-label {
+                display: block;
+                font-size: 16px;
+                font-weight: bold;
+                margin-top: 10px;
+            }
+    
+            .form-control {
+                width: 100%;
+                padding: 10px;
+                font-size: 16px;
+                margin-top: 5px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+    
+            input[type="submit"] {
+                background-color: #007bff;
+                color: #fff;
+                padding: 10px 20px;
+                font-size: 16px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                margin-top: 20px;
+            }
+    
+            input[type="submit"]:hover {
+                background-color: #0056b3;
+            }
+        </style>
+    <form action="/predict" method="post">
+        <legend>Adult Census Estimation Form</legend>
+
+            <label class="form-label">Age</label>
+            <input class="form-control" type="number" name="Age" placeholder="Enter the age of a person" required />
+        
+            <label class="form-label">Workclass</label>
+            <div>
+                <input type="radio" id="state-gov" name="Workclass" value="State-gov">
+                <label for="state-gov">State-gov</label>
+    
+                <input type="radio" id="self-emp-not-inc" name="Workclass" value="Self-emp-not-inc">
+                <label for="self-emp-not-inc">Self-emp-not-inc</label>
+    
+                <input type="radio" id="private" name="Workclass" value="Private">
+                <label for="private">Private</label>
+    
+                <input type="radio" id="federal-gov" name="Workclass" value="Federal-gov">
+                <label for="federal-gov">Federal-gov</label>
+    
+                <input type="radio" id="local-gov" name="Workclass" value="Local-gov">
+                <label for="local-gov">Local-gov</label>
+    
+                <input type="radio" id="self-emp-inc" name="Workclass" value="Self-emp-inc">
+                <label for="self-emp-inc">Self-emp-inc</label>
+    
+                <input type="radio" id="without-pay" name="Workclass" value="Without-pay">
+                <label for="without-pay">Without-pay</label>
+    
+                <input type="radio" id="never-worked" name="Workclass" value="Never-worked">
+                <label for="never-worked">Never-worked</label>
+            </div>
+       
+        
+            <label class="form-label">Final Weight</label>
+            <input class="form-control" type="number" name="FNLWGT" placeholder="Enter a value of FNLWGT" />
+       
+            <label class="form-label">Education</label>
+            <div>
+                <input type="radio" id="bachelors" name="Education" value=13>
+                <label for="bachelors">Bachelors</label>
+    
+                <input type="radio" id="hs-grad" name="Education" value=9>
+                <label for="hs-grad">HS-grad</label>
+    
+                <input type="radio" id="11th" name="Education" value=7>
+                <label for="11th">11th</label>
+    
+                <input type="radio" id="masters" name="Education" value=14>
+                <label for="masters">Masters</label>
+    
+                <input type="radio" id="9th" name="Education" value=5>
+                <label for="9th">9th</label>
+    
+                <input type="radio" id="some-college" name="Education" value=10>
+                <label for="some-college">Some-college</label>
+    
+                <input type="radio" id="assoc-acdm" name="Education" value=12>
+                <label for="assoc-acdm">Assoc-acdm</label>
+    
+                <input type="radio" id="assoc-voc" name="Education" value=11>
+                <label for="assoc-voc">Assoc-voc</label>
+    
+                <input type="radio" id="7th-8th" name="Education" value= 4>
+                <label for="7th-8th">7th-8th</label>
+    
+                <input type="radio" id="doctorate" name="Education" value=16>
+                <label for="doctorate">Doctorate</label>
+    
+                <input type="radio" id="prof-school" name="Education" value=15>
+                <label for="prof-school">Prof-school</label>
+    
+                <input type="radio" id="5th-6th" name="Education" value=3>
+                <label for="5th-6th">5th-6th</label>
+    
+                <input type="radio" id="10th" name="Education" value="10th">
+                <label for="10th">10th</label>
+    
+                <input type="radio" id="1st-4th" name="Education" value=6>
+                <label for="1st-4th">1st-4th</label>
+    
+                <input type="radio" id="preschool" name="Education" value=1>
+                <label for="preschool">Preschool</label>
+    
+                <input type="radio" id="12th" name="Education" value=8>
+                <label for="12th">12th</label>
+            </div>
+     
+      
+            <label class="form-label">Marital Status</label>
+            <div>
+                <input type="radio" id="never-married" name="Marital Status" value="Never-married">
+                <label for="never-married">Never-married</label>
+    
+                <input type="radio" id="married-civ-spouse" name="Marital Status" value="Married-civ-spouse">
+                <label for="married-civ-spouse">Married-civ-spouse</label>
+    
+                <input type="radio" id="divorced" name="Marital Status" value="Divorced">
+                <label for="divorced">Divorced</label>
+    
+                <input type="radio" id="married-spouse-absent" name="Marital Status" value="Married-spouse-absent">
+                <label for="married-spouse-absent">Married-spouse-absent</label>
+    
+                <input type="radio" id="separated" name="Marital Status" value="Separated">
+                <label for="separated">Separated</label>
+    
+                <input type="radio" id="married-af-spouse" name="Marital Status" value="Married-AF-spouse">
+                <label for="married-af-spouse">Married-AF-spouse</label>
+    
+                <input type="radio" id="widowed" name="Marital Status" value="Widowed">
+                <label for="widowed">Widowed</label>
+            </div>
+            
+     
+   
+            <label class="form-label">Occupation</label>
+            <div>
+                <input type="radio" id="adm-clerical" name="Occupation" value="Adm-clerical">
+                <label for="adm-clerical">Adm-clerical</label>
+    
+                <input type="radio" id="exec-managerial" name="Occupation" value="Exec-managerial">
+                <label for="exec-managerial">Exec-managerial</label>
+    
+                <input type="radio" id="handlers-cleaners" name="Occupation" value="Handlers-cleaners">
+                <label for="handlers-cleaners">Handlers-cleaners</label>
+    
+                <input type="radio" id="prof-specialty" name="Occupation" value="Prof-specialty">
+                <label for="prof-specialty">Prof-specialty</label>
+    
+                <input type="radio" id="other-service" name="Occupation" value="Other-service">
+                <label for="other-service">Other-service</label>
+    
+                <input type="radio" id="sales" name="Occupation" value="Sales">
+                <label for="sales">Sales</label>
+    
+                <input type="radio" id="craft-repair" name="Occupation" value="Craft-repair">
+                <label for="craft-repair">Craft-repair</label>
+    
+                <input type="radio" id="transport-moving" name="Occupation" value="Transport-moving">
+                <label for="transport-moving">Transport-moving</label>
+    
+                <input type="radio" id="farming-fishing" name="Occupation" value="Farming-fishing">
+                <label for="farming-fishing">Farming-fishing</label>
+    
+                <input type="radio" id="machine-op-inspct" name="Occupation" value="Machine-op-inspct">
+                <label for="machine-op-inspct">Machine-op-inspct</label>
+    
+                <input type="radio" id="tech-support" name="Occupation" value="Tech-support">
+                <label for="tech-support">Tech-support</label>
+    
+                <input type="radio" id="protective-serv" name="Occupation" value="Protective-serv">
+                <label for="protective-serv">Protective-serv</label>
+    
+                <input type="radio" id="armed-forces" name="Occupation" value="Armed-Forces">
+                <label for="armed-forces">Armed-Forces</label>
+    
+                <input type="radio" id="priv-house-serv" name="Occupation" value="Priv-house-serv">
+                <label for="priv-house-serv">Priv-house-serv</label>
+            </div>
+  
+   
+            <label class="form-label">Relationship</label>
+            <div>
+                <input type="radio" id="not-in-family" name="Relationship" value="Not-in-family">
+                <label for="not-in-family">Not-in-family</label>
+    
+                <input type="radio" id="husband" name="Relationship" value="Husband">
+                <label for="husband">Husband</label>
+    
+                <input type="radio" id="wife" name="Relationship" value="Wife">
+                <label for="wife">Wife</label>
+    
+                <input type="radio" id="own-child" name="Relationship" value="Own-child">
+                <label for="own-child">Own-child</label>
+    
+                <input type="radio" id="unmarried" name="Relationship" value="Unmarried">
+                <label for="unmarried">Unmarried</label>
+    
+                <input type="radio" id="other-relative" name="Relationship" value="Other-relative">
+                <label for="other-relative">Other-relative</label>
+            </div>
+   
+    
+            <label class="form-label">Race</label>
+            <div>
+                <input type="radio" id="white" name="Race" value="White">
+                <label for="white">White</label>
+    
+                <input type="radio" id="black" name="Race" value="Black">
+                <label for="black">Black</label>
+    
+                <input type="radio" id="asian-pac-islander" name="Race" value="Asian-Pac-Islander">
+                <label for="asian-pac-islander">Asian-Pac-Islander</label>
+    
+                <input type="radio" id="amer-indian-eskimo" name="Race" value="Amer-Indian-Eskimo">
+                <label for="amer-indian-eskimo">Amer-Indian-Eskimo</label>
+    
+                <input type="radio" id="other" name="Race" value="Other">
+                <label for="other">Other</label>
+            </div>
+
+            <label class="form-label">Sex</label>
+            <div>
+                <input type="radio" id="male" name="Sex" value= 1>
+                <label for="male">Male</label>
+    
+                <input type="radio" id="female" name="Sex" value= 0>
+                <label for="female">Female</label>
+            </div>
+
+            <label class="form-label">Capital Gain</label>
+            <input class="form-control" type="number" name="Capital Gain" placeholder="Enter a value of capital gain" required />
+
+            <label class="form-label">Capital Loss</label>
+            <input class="form-control" type="number" name="Capital Loss" placeholder="Enter a value of capital loss" required />
+
+            <label class="form-label">Hours/Week</label>
+            <input class="form-control" type="number" name="Hours/Week" placeholder="Enter a value of hours per week" required />
+
+            <label class="form-label">Country</label>
+            <div>
+                <input type="radio" id="united-states" name="Country" value="United-States">
+                <label for="united-states">United-States</label>
+    
+                <input type="radio" id="cuba" name="Country" value="Cuba">
+                <label for="cuba">Cuba</label>
+    
+                <input type="radio" id="jamaica" name="Country" value="Jamaica">
+                <label for="jamaica">Jamaica</label>
+    
+                <input type="radio" id="india" name="Country" value="India">
+                <label for="india">India</label>
+    
+                <input type="radio" id="mexico" name="Country" value="Mexico">
+                <label for="mexico">Mexico</label>
+    
+                <input type="radio" id="south-africa" name="Country" value="South Africa">
+                <label for="south-africa">South Africa</label>
+
+                <input type="radio" id="Puerto-Rico" name="Country" value="Puerto-Rico">
+                <label for="Puerto-Rico">Puerto-Rico</label>
+                
+                <input type="radio" id="Honduras" name="Country" value="Honduras">
+                <label for="Honduras">Honduras</label>
+
+                <input type="radio" id="England" name="Country" value="England">
+                <label for="England">England</label>
+
+                <input type="radio" id="Canada" name="Country" value="Canada">
+                <label for="Canada">Canada</label>
+
+                <input type="radio" id="Germany" name="Country" value="Germany">
+                <label for="Germany">Germany</label>
+
+                <input type="radio" id="Iran" name="Country" value="Iran">
+                <label for="Iran">Iran</label>
+
+                <input type="radio" id="Philippines" name="Country" value="Philippines">
+                <label for="Philippines">Philippines</label>
+
+                <input type="radio" id="Italy" name="Country" value="Italy">
+                <label for="Italy">Italy</label>
+
+                <input type="radio" id="Poland" name="Country" value="South Africa">
+                <label for="South Africa">South Africa</label>
+
+                <input type="radio" id="Columbia" name="Country" value="Columbia">
+                <label for="Columbia">Columbia</label>
+
+                <input type="radio" id="Cambodia" name="Country" value="Cambodia">
+                <label for="Cambodia">Cambodia</label>
+
+                <input type="radio" id="Thailand" name="Country" value="Thailand">
+                <label for="Thailand">Thailand</label>
+
+                <input type="radio" id="Ecuador" name="Country" value="Ecuador">
+                <label for="Ecuador">Ecuador</label>
+
+                <input type="radio" id="Laos" name="Country" value="Laos">
+                <label for="Laos">Laos</label>
+
+                <input type="radio" id="Taiwan" name="Country" value="Taiwan">
+                <label for="Taiwan">Taiwan</label>
+
+                <input type="radio" id="Haiti" name="Country" value="Haiti">
+                <label for="Haiti">Haiti</label>
+
+                <input type="radio" id="Portugal" name="Country" value="Portugal">
+                <label for="Portugal">Portugal</label>
+
+                <input type="radio" id="Dominican-Republic" name="Country" value="Dominican-Republic">
+                <label for="Dominican-Republic">Dominican-Republic</label>
+
+                <input type="radio" id="El-Salvador" name="Country" value="El-Salvador">
+                <label for="El-Salvador">El-Salvador</label>
+
+                <input type="radio" id="France" name="Country" value="France">
+                <label for="France">France</label>
+
+                <input type="radio" id="Guatemala" name="Country" value="Guatemala">
+                <label for="Guatemala">Guatemala</label>
+
+                <input type="radio" id="China" name="Country" value="China">
+                <label for="China">China</label>
+
+                <input type="radio" id="Japan" name="Country" value="Japan">
+                <label for="Japan">Japan</label>
+
+                <input type="radio" id="Yugoslavia" name="Country" value="Yugoslavia">
+                <label for="Yugoslavia">Yugoslavia</label>
+
+
+                <input type="radio" id="Peru" name="Country" value="Peru">
+                <label for="Peru">Peru</label>
+
+
+                <input type="radio" id="Outlying-US(Guam-USVI-etc)" name="Country" value="Outlying-US(Guam-USVI-etc)">
+                <label for="Outlying-US(Guam-USVI-etc)">Outlying-US(Guam-USVI-etc)</label>
+
+
+                <input type="radio" id="Scotland" name="Country" value="Scotland">
+                <label for="south-africa">Scotland</label>
+
+
+                <input type="radio" id="Trinadad&Tobago" name="Country" value="Trinadad&Tobago">
+                <label for="Trinadad&Tobago">Trinadad&Tobago</label>
+
+
+                <input type="radio" id="Greece" name="Country" value="Greece">
+                <label for="Greece">Greece</label>
+
+
+                <input type="radio" id="Nicaragua" name="Country" value="Nicaragua">
+                <label for="Nicaragua">Nicaragua</label>
+
+
+                <input type="radio" id="Vietnam" name="Country" value="Vietnam">
+                <label for="Vietnam">Vietnam</label>
+
+
+                <input type="radio" id="Hong Kong" name="Country" value="Hong Kong">
+                <label for="Hong Kong">Hong Kong</label>
+
+
+                <input type="radio" id="Ireland" name="Country" value="Ireland">
+                <label for="Ireland">Ireland</label>
+
+
+                <input type="radio" id="Hungary" name="Country" value="Hungary">
+                <label for="Hungary">Hungary</label>
+
+
+                <input type="radio" id="Holand-Netherlands" name="Country" value="Holand-Netherlands">
+                <label for="Holand-Netherlands">Holand-Netherlands</label>             
+    
+            </div>
+
+            <input type="submit" value="Estimate Median Adult Income">
+        </div>
+    </form>
+</body>
+<body>
+    <nav>
+            <p><a href="{{ url_for('home') }}">Back to Home</a></p>
+            <p><a href="{{ url_for('test') }}">Prediction</a></p>
+            <p><a href="{{ url_for('contact') }}">Contact</a></p>
+    </nav>
+</body>
+</html>

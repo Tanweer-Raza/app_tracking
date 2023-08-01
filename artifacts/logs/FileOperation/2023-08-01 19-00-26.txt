@@ -1,0 +1,4 @@
+2023-08-01/19:00:27		Model loaded from file: artifacts/preprocessor/Preprocessor.pkl
+2023-08-01/19:00:27		Data loaded from CSV file: artifacts/data/FinalFeatureData.csv
+2023-08-01/19:00:27		Model loaded from file: artifacts/models/TrainAndDeploy/BestModel.pkl
+2023-08-01/19:00:27		Data saved to CSV file: artifacts/prediction/result/2023-08-01 19-00-26.csv

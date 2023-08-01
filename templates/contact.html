@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .links {
+            background-color: #ffffff;
+            border: 1px solid #dddddd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Homepage</h1>
+    </header>
+    <div class="container">
+        <div class="links">
+            <p><a href="https://github.com/rachitmore">Github</a></p>
+            <p><a href="https://in.linkedin.com/in/rachit-more-30a63418a">Linkedin</a></p>
+        </div>
+    </div>
+</body>
+<body>
+    <nav>
+            <p><a href="{{ url_for('home') }}">Back to Home</a></p>
+            <p><a href="{{ url_for('test') }}">Prediction</a></p>
+            <p><a href="{{ url_for('contact') }}">Contact</a></p>
+    </nav>
+</body>
+</html>

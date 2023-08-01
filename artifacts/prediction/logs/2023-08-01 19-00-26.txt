@@ -1,0 +1,20 @@
+2023-08-01/19:00:26		Prediction Data Transformation has been started
+2023-08-01/19:00:27		Prediction data-
+    Age Workclass   Fnlwgt EducationNum  MaritalStatus  ...  Sex Capital_gain Capital_loss  HoursPerWeek  NativeCountry
+0  35.0   Private  54321.0           16  Never-married  ...  1.0      50000.0          0.0          60.0  United-States
+
+[1 rows x 13 columns]
+2023-08-01/19:00:27		Data Saved successfully to artifacts/prediction/data/2023-08-01 19-00-26.csv
+2023-08-01/19:00:27		Loading preprocessing model..
+2023-08-01/19:00:27		Preprocessing Model has been load successfully
+2023-08-01/19:00:27		loading train data and train preprocessor Model
+2023-08-01/19:00:27		Preprocessor Model has been trained with train data successfully
+2023-08-01/19:00:27		Transforming prediction data
+2023-08-01/19:00:27		Prediction Data has been transformed successfully
+2023-08-01/19:00:27		Saving prediction proccessed data..
+2023-08-01/19:00:27		Prediction proccessed data has been saved successfully
+2023-08-01/19:00:27		Prediction has been started
+2023-08-01/19:00:27		Loading prediction proccessed data
+2023-08-01/19:00:27		Prediction processed data has been loaded from artifacts/data/2023-08-01 19-00-26Sparse_matrix.npz Successfully
+2023-08-01/19:00:27		Best Model has been loaded from artifacts/models/TrainAndDeploy/BestModel.pkl successfully
+2023-08-01/19:00:27		Model Predict Successfully

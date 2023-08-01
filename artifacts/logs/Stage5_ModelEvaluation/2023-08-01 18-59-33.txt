@@ -1,0 +1,29 @@
+2023-08-01/18:59:33		Model Name -
+LGBMClassifier
+2023-08-01/18:59:33		Model Evaluation started
+2023-08-01/18:59:33		Calculating training accuracy
+2023-08-01/18:59:33		Training accuracy has been calculated 0.8835726409468324
+2023-08-01/18:59:33		Predicting X_test..
+2023-08-01/18:59:34		X_test has been predicted and saved to  successfully
+2023-08-01/18:59:34		creating classification report..
+2023-08-01/18:59:34		Classification Report -
+              precision    recall  f1-score   support
+
+           0       0.88      0.94      0.91      8139
+           1       0.76      0.60      0.67      2599
+
+    accuracy                           0.86     10738
+   macro avg       0.82      0.77      0.79     10738
+weighted avg       0.85      0.86      0.85     10738
+
+2023-08-01/18:59:34		creating confusion_matrix..
+2023-08-01/18:59:34		Confusion matirx -
+[[7633  506]
+ [1028 1571]]
+2023-08-01/18:59:34		Calculating Auc and Roc score
+2023-08-01/18:59:34		AUC-ROC Score - 0.9116988865215627
+2023-08-01/18:59:34		Model Evaluation has been done successfully
+2023-08-01/18:59:34		Creating RocCurveDisplay
+2023-08-01/18:59:34		Creating PrecisionRecallDisplay
+2023-08-01/18:59:35		Combining the display objects into a single plot
+2023-08-01/18:59:35		Plot has been saved to artifacts/plots/LGBMClassifier_roc_and_pr.png successfully

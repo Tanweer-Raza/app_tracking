@@ -1,0 +1,2 @@
+Age,Workclass,Fnlwgt,EducationNum,MaritalStatus,Occupation,Relationship,Race,Sex,Capital_gain,Capital_loss,HoursPerWeek,NativeCountry,Income
+35.0,Private,54321.0,16,Never-married,Prof-specialty,Unmarried,White,1.0,50000.0,0.0,60.0,United-States,>50K

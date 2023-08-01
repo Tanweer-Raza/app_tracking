@@ -1,0 +1,88 @@
+2023-08-01/18:59:05		Data Preprocessing Started
+2023-08-01/18:59:05		DataFrame Head -
+   age          workclass  fnlwgt   education  ...  capital-loss hours-per-week         country  income
+0   39          State-gov   77516   Bachelors  ...             0             40   United-States   <=50K
+1   50   Self-emp-not-inc   83311   Bachelors  ...             0             13   United-States   <=50K
+2   38            Private  215646     HS-grad  ...             0             40   United-States   <=50K
+3   53            Private  234721        11th  ...             0             40   United-States   <=50K
+4   28            Private  338409   Bachelors  ...             0             40            Cuba   <=50K
+
+[5 rows x 15 columns]
+2023-08-01/18:59:05		Remove spaces around the column names in the DataFrame
+2023-08-01/18:59:05		Create a dictionary to map the original column names to the standard column names
+2023-08-01/18:59:05		Rename the DataFrame columns using the dictionary
+2023-08-01/18:59:05		Updated column names:
+2023-08-01/18:59:05		Updated Columns DataFrame Head -
+   Age          Workclass  Fnlwgt   Education  ...  Capital_loss HoursPerWeek   NativeCountry  Income
+0   39          State-gov   77516   Bachelors  ...             0           40   United-States   <=50K
+1   50   Self-emp-not-inc   83311   Bachelors  ...             0           13   United-States   <=50K
+2   38            Private  215646     HS-grad  ...             0           40   United-States   <=50K
+3   53            Private  234721        11th  ...             0           40   United-States   <=50K
+4   28            Private  338409   Bachelors  ...             0           40            Cuba   <=50K
+
+[5 rows x 15 columns]
+2023-08-01/18:59:05		Featurename has been changed with standard columns name ['Age', 'Workclass', 'Fnlwgt', 'Education', 'EducationNum', 'MaritalStatus', 'Occupation', 'Relationship', 'Race', 'Sex', 'Capital_gain', 'Capital_loss', 'HoursPerWeek', 'NativeCountry', 'Income']
+2023-08-01/18:59:05		DataFrame shape -
+(32561, 15)
+2023-08-01/18:59:05		Duplicate values has been droped
+2023-08-01/18:59:05		Updated DataFrame shape -
+(32537, 15)
+2023-08-01/18:59:05		Whitespace has been removed
+2023-08-01/18:59:05		Updated DataFrame Head -
+   Age         Workclass  Fnlwgt  Education  EducationNum  ... Capital_gain Capital_loss HoursPerWeek  NativeCountry Income
+0   39         State-gov   77516  Bachelors            13  ...         2174            0           40  United-States  <=50K
+1   50  Self-emp-not-inc   83311  Bachelors            13  ...            0            0           13  United-States  <=50K
+2   38           Private  215646    HS-grad             9  ...            0            0           40  United-States  <=50K
+3   53           Private  234721       11th             7  ...            0            0           40  United-States  <=50K
+4   28           Private  338409  Bachelors            13  ...            0            0           40           Cuba  <=50K
+
+[5 rows x 15 columns]
+2023-08-01/18:59:06		Special character ? replaced to np.NaN value
+2023-08-01/18:59:06		Filling missing values
+2023-08-01/18:59:06		Workclass null values replaced with 0    Private
+Name: Workclass, dtype: object
+2023-08-01/18:59:06		Occupation null values replaced with 0    Prof-specialty
+Name: Occupation, dtype: object
+2023-08-01/18:59:06		NativeCountry null values replaced with 0    United-States
+Name: NativeCountry, dtype: object
+2023-08-01/18:59:06		Data is clean and saved to the artifacts/data/CleanData.csv file
+2023-08-01/18:59:06		DataFrame Head -
+   Age         Workclass  Fnlwgt  Education  EducationNum  ... Capital_gain Capital_loss HoursPerWeek  NativeCountry  Income
+0   39         State-gov   77516  Bachelors            13  ...         2174            0           40  United-States   <=50K
+1   50  Self-emp-not-inc   83311  Bachelors            13  ...            0            0           13  United-States   <=50K
+2   38           Private  215646    HS-grad             9  ...            0            0           40  United-States   <=50K
+3   53           Private  234721       11th             7  ...            0            0           40  United-States   <=50K
+4   28           Private  338409  Bachelors            13  ...            0            0           40           Cuba   <=50K
+
+[5 rows x 15 columns]
+2023-08-01/18:59:06		Extracting feature from dataset by dropping target variable and unnessary feature
+2023-08-01/18:59:06		Income and Education feature has been dropped
+2023-08-01/18:59:06		Final-feature Data has been saved to artifacts/data/FinalFeatureData.csv for train and deploy process
+2023-08-01/18:59:06		Extracting target from dataset.
+2023-08-01/18:59:06		Mapping target value with numerical values
+2023-08-01/18:59:06		Target values has been mapped
+2023-08-01/18:59:06		Final-target dataset has been saved to artifacts/data/FinalTargetData.csv
+2023-08-01/18:59:06		Data Preprocessed Successfully
+2023-08-01/18:59:06		Splitting the Final-feature and Final-target values
+2023-08-01/18:59:06		Final-feature and Final-target data has been splitted
+2023-08-01/18:59:06		X_train data has been saved to artifacts/data/X_train.csv
+2023-08-01/18:59:06		X_test data has been saved to artifacts/data/X_test.csv
+2023-08-01/18:59:06		y_train data has been saved to artifacts/data/y_train.csv
+2023-08-01/18:59:07		y_test data has been saved to artifacts/data/y_test.csv
+2023-08-01/18:59:07		Data Scaling and Encoding Started
+2023-08-01/18:59:07		Extracting numerical and categorical feature columns
+2023-08-01/18:59:07		Numerical columns are Index(['Age', 'Fnlwgt', 'EducationNum', 'Sex', 'Capital_gain', 'Capital_loss',
+       'HoursPerWeek'],
+      dtype='object')
+2023-08-01/18:59:07		Categorical columns are Index(['Workclass', 'MaritalStatus', 'Occupation', 'Relationship', 'Race',
+       'NativeCountry'],
+      dtype='object')
+2023-08-01/18:59:07		Creating DataPreprocessing pipeline for numerical and categorical feature
+2023-08-01/18:59:07		Data preprocessing pipeline has been created and saved to artifacts/preprocessor/Preprocessor.pkl
+2023-08-01/18:59:07		Fitting and transforming X_train Dataset
+2023-08-01/18:59:07		X_train dataset has been fit and transformed and saved to artifacts/data/X_trainSparse_matrix.npz
+2023-08-01/18:59:07		Fitting and transforming Final_train Dataset
+2023-08-01/18:59:07		Final_train dataset has been fit and transformed and saved to artifacts/data/Final_trainSparse_matrix.npz
+2023-08-01/18:59:07		Transforming X_test Dataset
+2023-08-01/18:59:07		X_test dataset has been transformed and saved to artifacts/data/X_trainSparse_matrix.npz
+2023-08-01/18:59:07		Data Scaling and Encoding has been done successfully

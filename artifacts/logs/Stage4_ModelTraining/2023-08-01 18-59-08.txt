@@ -1,0 +1,50 @@
+2023-08-01/18:59:08		Model Training has been Started
+2023-08-01/18:59:08		creating and fitting GradientBoostingClassifier model
+2023-08-01/18:59:27		GradientBoostingClassifier model GradientBoostingClassifier(learning_rate=0.2, n_estimators=200) has been trained
+2023-08-01/18:59:27		creating and fitting XGBClassifier model
+2023-08-01/18:59:31		XGBClassifier model XGBClassifier(base_score=None, booster=None, callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, gpu_id=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=0.1, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              n_estimators=200, n_jobs=None, num_parallel_tree=None,
+              predictor=None, random_state=None, ...) has been trained
+2023-08-01/18:59:31		creating and fitting LGBMClassifier model
+2023-08-01/18:59:32		LGBMClassifier model LGBMClassifier(learning_rate=0.05, objective='binary', random_state=42) has been trained
+2023-08-01/18:59:32		creating and fitting HistGradientBoostingClassifier model
+2023-08-01/18:59:32		HistGradientBoostingClassifier model HistGradientBoostingClassifier(learning_rate=0.2, max_depth=10) has been trained
+2023-08-01/18:59:33		Model Train has been Done Successfully
+2023-08-01/18:59:33		Extracting best model
+2023-08-01/18:59:33		Loading models ..
+2023-08-01/18:59:33		Models has been loaded
+2023-08-01/18:59:33		Creating dictionary of model
+2023-08-01/18:59:33		Calculating AUC and ROC Score
+2023-08-01/18:59:33		AUC and ROC Score has been calculated for GradientBoostingClassifier(learning_rate=0.2, n_estimators=200) - 0.9079609049403777
+2023-08-01/18:59:33		Calculating AUC and ROC Score
+2023-08-01/18:59:33		AUC and ROC Score has been calculated for XGBClassifier(base_score=None, booster=None, callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, gpu_id=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=0.1, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              n_estimators=200, n_jobs=None, num_parallel_tree=None,
+              predictor=None, random_state=None, ...) - 0.9031042542329525
+2023-08-01/18:59:33		Calculating AUC and ROC Score
+2023-08-01/18:59:33		AUC and ROC Score has been calculated for LGBMClassifier(learning_rate=0.05, objective='binary', random_state=42) - 0.9116988865215627
+2023-08-01/18:59:33		Calculating AUC and ROC Score
+2023-08-01/18:59:33		AUC and ROC Score has been calculated for HistGradientBoostingClassifier(learning_rate=0.2, max_depth=10) - 0.9088656117843957
+2023-08-01/18:59:33		Best Model - LGBMClassifier(learning_rate=0.05, objective='binary', random_state=42) and auc and roc - 0.9116988865215627
+2023-08-01/18:59:33		Best Model found successfully
+2023-08-01/18:59:33		Loading models ..
+2023-08-01/18:59:33		Best Model Name LGBMClassifier and Deploy Model NameGradientBoostingClassifier
+2023-08-01/18:59:33		no best Model found for train and deploy successfully
+2023-08-01/18:59:33		Best Model Name LGBMClassifier and Deploy Model NameXGBClassifier
+2023-08-01/18:59:33		no best Model found for train and deploy successfully
+2023-08-01/18:59:33		Best Model found for train and deploy successfully

@@ -1,0 +1,10 @@
+2023-08-01/18:58:56		Creating application
+2023-08-01/18:58:56		Application has been Created
+2023-08-01/18:58:57		Home Page
+2023-08-01/18:59:01		Home Page
+2023-08-01/18:59:02		Data Source Option Page
+2023-08-01/18:59:04		Training Page
+2023-08-01/18:59:04		Local
+2023-08-01/18:59:35		Model Trained Successfully
+2023-08-01/19:00:27		Adult Census Income Estimate Approximately more than  50K
+2023-08-01/19:00:31		Home Page
