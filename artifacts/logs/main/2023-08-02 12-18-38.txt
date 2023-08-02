@@ -1,0 +1,3 @@
+2023-08-02/12:18:38		Creating application
+2023-08-02/12:18:38		Application has been Created
+2023-08-02/12:18:41		Home Page
