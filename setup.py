@@ -17,7 +17,7 @@ def get_requirements_list():
 setup(
     name="Adult Census Income Prediction",
     license="MIT",
-    version="0.0.1",
+    version="0.0.2",
     description="Project has been completed.",
     author="Rachit More",
     packages=find_packages(),
